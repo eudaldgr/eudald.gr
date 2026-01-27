@@ -1,24 +1,24 @@
-import './global.css'
+import '@/global.css'
 import type { Metadata } from 'next'
 import { GeistSans } from 'geist/font/sans'
 import { GeistMono } from 'geist/font/mono'
-import { Navbar } from './components/nav'
-import Footer from './components/footer'
-import { baseUrl } from './sitemap'
+import { Navbar } from '@/components/nav'
+import Footer from '@/components/footer'
+import { baseUrl } from '@/sitemap'
 
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
   title: {
-    default: 'Next.js Portfolio Starter',
-    template: '%s | Next.js Portfolio Starter',
+    default: 'El web de l\'Eudald',
+    template: '%s | El web de l\'Eudald',
   },
-  description: 'This is my portfolio.',
+  description: 'Aquest és el meu web.',
   openGraph: {
-    title: 'My Portfolio',
-    description: 'This is my portfolio.',
+    title: 'El web de l\'Eudald',
+    description: 'Aquest és el meu web.',
     url: baseUrl,
-    siteName: 'My Portfolio',
-    locale: 'en_US',
+    siteName: 'El web de l\'Eudald',
+    locale: 'ca-ES',
     type: 'website',
   },
   robots: {
@@ -43,7 +43,7 @@ export default function RootLayout({
 }) {
   return (
     <html
-      lang="en"
+      lang="ca"
       className={cx(
         'text-black bg-white dark:text-white dark:bg-black',
         GeistSans.variable,

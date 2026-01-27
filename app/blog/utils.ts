@@ -67,20 +67,22 @@ export function formatDate(date: string, includeRelative = false) {
   let formattedDate = ''
 
   if (yearsAgo > 0) {
-    formattedDate = `${yearsAgo}y ago`
+    formattedDate = `${yearsAgo} anys enrere`
   } else if (monthsAgo > 0) {
-    formattedDate = `${monthsAgo}mo ago`
+    formattedDate = `${monthsAgo} mesos enrere`
   } else if (daysAgo > 0) {
-    formattedDate = `${daysAgo}d ago`
+    formattedDate = `${daysAgo} dies enrere`
   } else {
-    formattedDate = 'Today'
+    formattedDate = 'Avui'
   }
 
-  let fullDate = targetDate.toLocaleString('en-us', {
-    month: 'long',
-    day: 'numeric',
-    year: 'numeric',
-  })
+  // YYYY-MM-DD
+  let fullDate = `${targetDate.getFullYear()}-${String(targetDate.getMonth() + 1).padStart(2, '0')}-${String(targetDate.getDate()).padStart(2, '0')}`
+  // let fullDate = targetDate.toLocaleString('en-us', {
+  //   month: 'long',
+  //   day: 'numeric',
+  //   year: 'numeric',
+  // })
 
   if (!includeRelative) {
     return fullDate
