@@ -8,9 +8,9 @@ export default function Page() {
       </h1>
       <p className="mb-4">
         Sóc un <mark className="mdx-highlight mdx-highlight-green">desenvolupador de programari</mark> apassionat per
-        l'open source i la tecnologia. M'agrada programari apassionat per l'open source i la tecnologia. M'agrada
-        escriure sobre els meus projectes, experiències i aprenentatges en el món del desenvolupament, la seguretat,
-        el <mark className="mdx-highlight mdx-highlight-orange">DevOps</mark> i la infraestructura.
+        l'open source i la tecnologia. M'agrada escriure sobre els meus projectes, experiències i aprenentatges en el
+        món del desenvolupament, la seguretat, el <mark className="mdx-highlight mdx-highlight-orange">DevOps</mark> i
+        la infraestructura.
       </p>
       <p className="mb-4">
         A més a més, gaudeixo cuinant i explorant la natura a través del
