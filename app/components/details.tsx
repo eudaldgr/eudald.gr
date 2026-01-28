@@ -1,14 +1,14 @@
 import type { ReactNode } from 'react'
 
 type DetailsProps = {
-  summary: string
+  title: string
   children: ReactNode
   open?: boolean
   className?: string
 }
 
 export function Details({
-  summary,
+  title,
   children,
   open = false,
   className,
@@ -28,7 +28,7 @@ export function Details({
         >
           <path d="M9 5l7 7-7 7" strokeLinecap="round" strokeLinejoin="round" />
         </svg>
-        {summary}
+        {title}
       </summary>
       <div className="mdx-details-content">{children}</div>
     </details>
