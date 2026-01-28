@@ -18,14 +18,14 @@ const navItems = {
 
 export function Navbar() {
   return (
-    <aside className="-ml-[8px] mb-16 tracking-tight">
+    <aside className="-ml-[8px] mb-8 sm:mb-16 tracking-tight">
       <div className="lg:sticky lg:top-20">
         <nav
-          className="flex flex-row items-start relative px-0 pb-0 fade md:overflow-auto scroll-pr-6 md:relative"
+          className="flex flex-row items-center relative px-0 pb-0 fade md:relative"
           id="nav"
         >
-          <div className="flex flex-row items-center justify-between w-full">
-            <div className="flex flex-row space-x-0 pr-10">
+          <div className="flex flex-row flex-wrap items-center gap-2 w-full">
+            <div className="order-2 sm:order-1 flex flex-row flex-wrap gap-1 pr-2">
               {Object.entries(navItems).map(([path, { name }]) => {
                 return (
                   <Link
@@ -38,7 +38,9 @@ export function Navbar() {
                 )
               })}
             </div>
-            <ThemeToggle />
+            <div className="order-1 sm:order-2 flex sm:ml-auto">
+              <ThemeToggle />
+            </div>
           </div>
         </nav>
       </div>

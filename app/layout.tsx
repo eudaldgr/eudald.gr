@@ -45,8 +45,8 @@ export default function RootLayout({
         />
       </head>
       <body className="antialiased">
-        <div className="min-h-screen max-w-xl mx-4 lg:mx-auto pt-8 flex flex-col">
-          <main className="flex-1 min-w-0 mt-6 flex flex-col px-2 md:px-0">
+        <div className="min-h-screen max-w-xl mx-4 lg:mx-auto pt-4 sm:pt-8 flex flex-col">
+          <main className="flex-1 min-w-0 mt-4 sm:mt-6 flex flex-col px-2 md:px-0">
             <Navbar />
             {children}
           </main>
