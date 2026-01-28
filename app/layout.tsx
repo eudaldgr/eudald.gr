@@ -1,38 +1,11 @@
 import '@/global.css'
-import type { Metadata } from 'next'
 import { GeistSans } from 'geist/font/sans'
 import { GeistMono } from 'geist/font/mono'
 import { Navbar } from '@/components/nav'
 import Footer from '@/components/footer'
-import { baseUrl } from '@/sitemap'
+import { siteMetadata } from 'app/site-metadata'
 
-export const metadata: Metadata = {
-  metadataBase: new URL(baseUrl),
-  title: {
-    default: 'El web de l\'Eudald',
-    template: '%s | El web de l\'Eudald',
-  },
-  description: 'Aquest és el meu web.',
-  openGraph: {
-    title: 'El web de l\'Eudald',
-    description: 'Aquest és el meu web.',
-    url: baseUrl,
-    siteName: 'El web de l\'Eudald',
-    locale: 'ca-ES',
-    type: 'website',
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  },
-}
+export const metadata = siteMetadata
 
 const cx = (...classes) => classes.filter(Boolean).join(' ')
 
