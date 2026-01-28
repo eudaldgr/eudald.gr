@@ -56,6 +56,12 @@ function Code({ children, ...props }) {
   return <code dangerouslySetInnerHTML={{ __html: codeHTML }} {...props} />
 }
 
+function Highlight({ children, color = 'yellow' }) {
+  return (
+    <mark className={`mdx-highlight mdx-highlight-${color}`}>{children}</mark>
+  )
+}
+
 function slugify(str) {
   return str
     .toString()
@@ -102,6 +108,7 @@ let components = {
   code: Code,
   Table,
   Details,
+  Highlight,
 }
 
 export function CustomMDX(props) {
