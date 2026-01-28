@@ -32,14 +32,14 @@
   --sh-identifier: white;
   --sh-keyword: #f47067;
   --sh-string: #0fa295;
-  --mdx-highlight-ink: rgba(255, 215, 90, 0.55);
-  --mdx-highlight-yellow: rgba(255, 215, 90, 0.55);
-  --mdx-highlight-orange: rgba(255, 170, 80, 0.55);
-  --mdx-highlight-red: rgba(255, 120, 120, 0.55);
-  --mdx-highlight-green: rgba(120, 210, 170, 0.55);
-  --mdx-highlight-blue: rgba(120, 180, 255, 0.55);
-  --mdx-highlight-purple: rgba(185, 150, 255, 0.55);
-  --mdx-highlight-pink: rgba(255, 150, 205, 0.55);
+  --mdx-highlight-ink: rgba(255, 230, 110, 0.8);
+  --mdx-highlight-yellow: rgba(255, 230, 110, 0.8);
+  --mdx-highlight-orange: rgba(255, 185, 95, 0.78);
+  --mdx-highlight-red: rgba(255, 140, 140, 0.75);
+  --mdx-highlight-green: rgba(135, 230, 185, 0.75);
+  --mdx-highlight-blue: rgba(135, 200, 255, 0.75);
+  --mdx-highlight-purple: rgba(200, 165, 255, 0.75);
+  --mdx-highlight-pink: rgba(255, 165, 215, 0.75);
 }
 
 html {
@@ -181,6 +181,11 @@ details.mdx-details {
   background: rgb(0 0 0 / 0.02);
 }
 
+:root.dark details.mdx-details {
+  border: 1px solid rgb(255 255 255 / 0.14);
+  background: rgb(255 255 255 / 0.04);
+}
+
 details.mdx-details>summary {
   padding: 0.6rem 0.8rem;
   cursor: pointer;
@@ -206,6 +211,15 @@ details.mdx-details[open]>summary .mdx-details-icon {
 details.mdx-details .mdx-details-content {
   padding: 0.6rem 0.8rem 0.9rem;
   border-top: 1px solid rgb(0 0 0 / 0.08);
+}
+
+:root.dark details.mdx-details>summary,
+:root.dark details.mdx-details .mdx-details-content {
+  color: rgb(229 229 229);
+}
+
+:root.dark details.mdx-details .mdx-details-content {
+  border-top: 1px solid rgb(255 255 255 / 0.12);
 }
 
 mark.mdx-highlight {
