@@ -4,14 +4,17 @@ export default function Page() {
   return (
     <section>
       <h1 className="mb-8 text-2xl font-semibold tracking-tighter">
-        Eudald Gubert i Roldan
+        Hola, sóc l'Eudald 👋
       </h1>
       <p className="mb-4">
-        {`I'm a Vim enthusiast and tab advocate, finding unmatched efficiency in
-        Vim's keystroke commands and tabs' flexibility for personal viewing
-        preferences. This extends to my support for static typing, where its
-        early error detection ensures cleaner code, and my preference for dark
-        mode, which eases long coding sessions by reducing eye strain.`}
+        Sóc un desenvolupador de programari apassionat per l'open source i la
+        tecnologia. M'agrada escriure sobre els meus projectes, experiències i
+        aprenentatges en el món del desenvolupament, la seguretat, el DevOps i
+        la infraestructura.
+      </p>
+      <p className="mb-4">
+        A més a més, gaudeixo cuinant i explorant la natura a través del
+        senderisme.
       </p>
       <div className="my-8">
         <BlogPosts />
