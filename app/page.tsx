@@ -17,6 +17,9 @@ export default function Page() {
         senderisme.
       </p>
       <div className="my-8">
+        <h3 className="mb-4 text-lg font-semibold tracking-tighter">
+          Articles recents
+        </h3>
         <BlogPosts />
       </div>
     </section>

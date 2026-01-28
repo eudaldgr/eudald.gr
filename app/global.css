@@ -1,5 +1,7 @@
 @import 'tailwindcss';
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 ::selection {
   background-color: #47a3f3;
   color: #fefefe;
@@ -17,16 +19,11 @@
   --sh-entity: #e25a1c;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --sh-class: #4c97f8;
-    --sh-identifier: white;
-    --sh-keyword: #f47067;
-    --sh-string: #0fa295;
-  }
-  html {
-    color-scheme: dark;
-  }
+:root.dark {
+  --sh-class: #4c97f8;
+  --sh-identifier: white;
+  --sh-keyword: #f47067;
+  --sh-string: #0fa295;
 }
 
 html {
@@ -147,4 +144,39 @@ table {
 
 .title {
   text-wrap: balance;
+}
+
+/* Theme toggle: show correct icon/label based on html[data-theme] (set before paint) */
+.theme-toggle .theme-icon,
+.theme-toggle .theme-label {
+  display: none;
+}
+
+.theme-toggle .theme-icon-auto {
+  display: inline-flex;
+}
+
+html[data-theme='light'] .theme-toggle .theme-icon-auto,
+html[data-theme='dark'] .theme-toggle .theme-icon-auto {
+  display: none;
+}
+
+html[data-theme='light'] .theme-toggle .theme-icon-light {
+  display: inline-flex;
+}
+
+html[data-theme='dark'] .theme-toggle .theme-icon-dark {
+  display: inline-flex;
+}
+
+@media (min-width: 640px) {
+  html[data-theme='light'] .theme-toggle .theme-label-light {
+    display: inline-block;
+  }
+  html[data-theme='dark'] .theme-toggle .theme-label-dark {
+    display: inline-block;
+  }
+  html[data-theme='system'] .theme-toggle .theme-label-auto {
+    display: inline-block;
+  }
 }
