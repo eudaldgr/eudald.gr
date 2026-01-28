@@ -134,8 +134,8 @@ export default function ThemeToggle() {
       </span>
 
       <span className="theme-label theme-label-auto">auto</span>
-      <span className="theme-label theme-label-light">light</span>
-      <span className="theme-label theme-label-dark">dark</span>
+      <span className="theme-label theme-label-light">clar</span>
+      <span className="theme-label theme-label-dark">fosc</span>
     </button>
   )
 }
