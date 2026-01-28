@@ -136,10 +136,58 @@ input[type='email'] {
 }
 
 table {
-  display: block;
-  max-width: fit-content;
-  overflow-x: auto;
-  white-space: nowrap;
+  display: inline-table;
+  width: max-content;
+  max-width: 100%;
+  border-collapse: collapse;
+  border: 1px solid rgb(0 0 0 / 0.12);
+}
+
+th,
+td {
+  padding: 0.5rem 0.75rem;
+  border: 1px solid rgb(0 0 0 / 0.08);
+  vertical-align: top;
+  white-space: normal;
+  word-break: break-word;
+}
+
+tbody tr:nth-child(even) {
+  background: rgb(0 0 0 / 0.04);
+}
+
+details.mdx-details {
+  margin: 1rem 0;
+  border: 1px solid rgb(0 0 0 / 0.12);
+  border-radius: 0.5rem;
+  background: rgb(0 0 0 / 0.02);
+}
+
+details.mdx-details > summary {
+  padding: 0.6rem 0.8rem;
+  cursor: pointer;
+  font-weight: 600;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+details.mdx-details > summary::-webkit-details-marker {
+  display: none;
+}
+
+details.mdx-details > summary .mdx-details-icon {
+  transition: transform 0.2s ease;
+}
+
+details.mdx-details[open] > summary .mdx-details-icon {
+  transform: rotate(90deg);
+}
+
+details.mdx-details .mdx-details-content {
+  padding: 0.6rem 0.8rem 0.9rem;
+  border-top: 1px solid rgb(0 0 0 / 0.08);
 }
 
 .title {

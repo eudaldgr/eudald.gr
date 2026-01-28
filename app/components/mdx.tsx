@@ -4,6 +4,8 @@ import { MDXRemote } from 'next-mdx-remote/rsc'
 import { highlight } from 'sugar-high'
 import React from 'react'
 import { Callout } from 'app/components/callout'
+import remarkGfm from 'remark-gfm'
+import { Details } from 'app/components/details'
 
 function Table({ data }) {
   let headers = data.headers.map((header, index) => (
@@ -99,12 +101,14 @@ let components = {
   a: CustomLink,
   code: Code,
   Table,
+  Details,
 }
 
 export function CustomMDX(props) {
   return (
     <MDXRemote
       {...props}
+      options={{ mdxOptions: { remarkPlugins: [remarkGfm] } }}
       components={{ ...components, ...(props.components || {}) }}
     />
   )
