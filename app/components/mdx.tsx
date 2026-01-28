@@ -3,6 +3,7 @@ import Image from 'next/image'
 import { MDXRemote } from 'next-mdx-remote/rsc'
 import { highlight } from 'sugar-high'
 import React from 'react'
+import { Callout } from 'app/components/callout'
 
 function Table({ data }) {
   let headers = data.headers.map((header, index) => (
@@ -94,6 +95,7 @@ let components = {
   h5: createHeading(5),
   h6: createHeading(6),
   Image: RoundedImage,
+  Callout,
   a: CustomLink,
   code: Code,
   Table,
