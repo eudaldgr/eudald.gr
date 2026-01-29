@@ -13,8 +13,8 @@ export default function Page() {
         la infraestructura.
       </p>
       <p className="mb-4">
-        A més a més, gaudeixo cuinant i explorant la natura a través del
-        senderisme.
+        A més a més, gaudeixo cuinant, explorant la natura a través del
+        senderisme i jugant a jocs de taula.
       </p>
       <div className="my-8">
         <h3 className="mb-4 text-lg font-semibold tracking-tighter">
