@@ -1,0 +1,13 @@
++++
+title = "Pull Requests"
+description = "Aquí recopilo les meves pull requests públiques."
+template = "page.html"
++++
+
+Algunes pull requests destacades a projectes open-source.
+
+# RoboSats
+
+- [#2375 - feat: Implement Garage Key functionality and account recovery](https://github.com/RoboSats/robosats/pull/2375)
+
+  **Estat**: Open
